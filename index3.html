@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSedge Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        header .logo {
+            font-size: 24px;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .hero {
+            background-image: url('data:image/jpeg;base64,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');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+        }
+        .features .feature {
+            width: 22%;
+            text-align: center;
+        }
+        .features .feature h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .features .feature p {
+            font-size: 16px;
+        }
+        .testimonials {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .testimonials .testimonial {
+            margin-bottom: 20px;
+        }
+        .testimonials .testimonial p {
+            font-size: 18px;
+            font-style: italic;
+            margin: 0;
+        }
+        .testimonials .testimonial .author {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .contact {
+            padding: 40px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact form input, .contact form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .contact .social {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact .social a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .features .feature {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CSedge</div>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to CSEdge</h1>
+    </section>
+    <section class="features" id="features">
+        <div class="feature">
+            <h2>Comprehensive Course Catalog</h2>
+            <p>Explore a wide range of courses across various domains and skill levels, from beginner to advanced. Our curriculum is designed to meet the needs of both students and professionals.</p>
+        </div>
+        <div class="feature">
+            <h2>Expert Instructors</h2>
+            <p>Learn from industry experts and experienced educators who are passionate about teaching. Our instructors bring real-world experience and insights to every lesson.</p>
+        </div>
+        <div class="feature">
+            <h2>Flexible Learning</h2>
+            <p>Study at your own pace with our flexible learning options. Access course materials anytime, anywhere, and balance your education with your busy schedule.</p>
+        </div>
+        <div class="feature">
+            <h2>Career Support</h2>
+            <p>Get the support you need to advance your career. Our career services include resume reviews, interview preparation, and job placement assistance to help you achieve your professional goals.</p>
+        </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="testimonial">
+            <p>"CSedge has transformed our workflow. Highly recommended!"</p>
+            <div class="author">- John Doe</div>
+        </div>
+        <div class="testimonial">
+            <p>"An indispensable tool for our team. Excellent support."</p>
+            <div class="author">- Jane Smith</div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </section>
+</body>
+</html>
